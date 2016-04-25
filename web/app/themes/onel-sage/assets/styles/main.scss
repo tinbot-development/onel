@@ -3,9 +3,12 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/fontawesome/scss/font-awesome.scss";
+@import "../../bower_components/hover/scss/hover.scss";
 // endbower
 
 @import "common/global";
+@import "common/typography";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";

@@ -17,19 +17,36 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       get_template_part('templates/header');
+
+      if(is_front_page()) {
+        get_template_part('templates/home/banner');
+        get_template_part('templates/home/what-we-do');
+        get_template_part('templates/home/our-expertise');
+        get_template_part('templates/home/case-studies');
+        get_template_part('templates/home/find-us');
+      }
     ?>
-    <div class="wrap container" role="document">
-      <div class="content row">
-        <main class="main">
-          <?php include Wrapper\template_path(); ?>
-        </main><!-- /.main -->
-        <?php if (Setup\display_sidebar()) : ?>
-          <aside class="sidebar">
-            <?php include Wrapper\sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
-        <?php endif; ?>
-      </div><!-- /.content -->
-    </div><!-- /.wrap -->
+
+    <? if(!is_front_page()) { ?>
+
+      <div class="wrap container" role="document">
+        <div class="content row">
+
+          <main class="main">
+            <?php include Wrapper\template_path(); ?>
+          </main><!-- /.main -->
+
+          <?php if (Setup\display_sidebar()) : ?>
+            <aside class="sidebar">
+              <?php include Wrapper\sidebar_path(); ?>
+            </aside><!-- /.sidebar -->
+          <?php endif; ?>
+
+        </div><!-- /.content -->
+      </div><!-- /.wrap -->
+
+   <?php } ?>
+
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');

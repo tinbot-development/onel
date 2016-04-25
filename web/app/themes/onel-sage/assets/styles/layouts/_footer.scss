@@ -1,0 +1,90 @@
+footer {
+  .footermenu {
+    background-color: $footer-bg-color;
+    min-height: 135px;
+    section {
+      padding: 18px 0;
+      nav {
+        margin-top: 25px;
+        #menu-footer-menu {
+          margin-bottom: 30px;
+          li {
+            float: left;
+            &:hover {
+              background-color: transparent;
+            }
+            a {
+              color: $white;
+              font-size: $main-menu-primary-font-size;
+              font-family: $font-family-OpenSans;
+              font-weight: 100;
+              &:hover {
+                background-color: transparent;
+                font-weight: 100;
+                color: $secondary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footnote {
+    background-color: $footer-bar-bg-color;
+    min-height: 65px;
+    section {
+      margin-top: 25px;
+      p {
+        color: $white;
+        font-size: $footer-footnote-font-size;
+        font-family: $font-family-OpenSans;
+        font-weight: 300;
+        span {
+          font-weight: 700;
+        }
+        a {
+          color: $white;
+          font-size: $footer-footnote-font-size;
+          font-family: $font-family-OpenSans;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pull-right-sm {
+    float: right;
+  }
+}
+@media screen and (max-width: 768px) {
+  #case-studies .aside section {
+    position: relative;
+    max-height: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
+  .header-bar {
+    ol{
+      &.connect {
+        list-style-type: none;
+        margin: 10px 0 10px 0;
+        padding: 0;
+      }
+    }
+  }
+  .navbar-default .navbar-collapse {
+    border-color: #e7e7e7;
+    background-color: $drop-down-menu-background;
+    position: relative;
+    top: 50px;
+  }
+  .navbar-default .navbar-toggle {
+    position: relative;
+    top: 40px;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: $drop-down-menu-background;
+  }
+}
