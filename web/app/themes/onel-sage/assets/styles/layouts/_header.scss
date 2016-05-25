@@ -12,7 +12,6 @@
   p {
     color: $white;
     font-size: 16px;
-    font-family: $font-family-OpenSans;
     font-weight: 400;
     span {
       font-weight: 700;
@@ -26,22 +25,22 @@
     }
   }
 }
-.nav-bg {
-  background: url('../images/bg-menu.png') no-repeat right center $header-bar-color;
-  height: 140px;
-}
-.navbar-default {
-  .navbar-collapse {
-    margin-top: 40px;
-  }
 
+.nav-bg {
+    height: 100px;
+    background-color: rgba(38, 36, 123, 0.95);
+    .navbar-header .navbar-brand >img {
+      height: 120px;
+      margin-top: -3em;
+    }
 }
+
+
 #menu-main-menu {
   & > li {
     &  > a {
       color: $white;
       font-size: $main-menu-primary-font-size;
-      font-family: $font-family-OpenSans;
       font-weight: 300;
       &:hover {
         color: $secondary-color;
@@ -52,8 +51,24 @@
         a {
           color: $white;
           font-size: $main-menu-secondary-font-size;
-          font-family: $font-family-OpenSans;
           font-weight: 300;
+        }
+      }
+    }
+  }
+}
+.navbar-default {
+  .navbar-collapse {
+    margin-top: 18px;
+  }
+
+  .navbar-nav {
+    & > .active {
+      & >a {
+        background-color: transparent;
+        font-weight: 400 !important;
+        &:hover {
+          background-color: transparent;
         }
       }
     }
@@ -66,6 +81,7 @@
   background-color: $drop-down-menu-background;
 }
 ul#menu-main-menu {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
   li {
     &.dropdown {
       a {
@@ -85,7 +101,6 @@ ul#menu-main-menu {
           border-bottom-color: $drop-down-menu-border-color;
           a {
             color: $black;
-            font-family: $font-family-OpenSans;
             font-weight: 400;
             padding: 10px 20px;
             font-size: 16px;
@@ -111,7 +126,7 @@ ul#menu-main-menu {
   }
 }
 
-ul#menu-main-menu > li.current-menu-parent > ul {
+ul#menu-main-menu > li.menu-item-has-children > ul, ul#menu-main-menu > li.current-menu-parent > ul {
   top: 150%;
   &:before {
     position: absolute;
@@ -154,4 +169,24 @@ ul#menu-main-menu > li.current-menu-parent > ul {
       }
     }
   }
+}
+div#n2-ss-2 .n2-font-07734729d46c383b2a8b6f9be1681684-paragraph {
+  margin-bottom: 0.8%;
+}
+#n2-ss-1-align .hvr-icon-forward .nextend-smartslider-button-container {
+  z-index: 1;
+  left: -50px;
+  top: 29px;
+  border-radius: 100%;
+  height: 120px;
+}
+div#n2-ss-1 .n2-font-1103-link a {
+  height: 120px;
+}
+@media screen and (max-width: 768px) {
+  .n2-ss-layer.readmore a {
+      position: relative;
+      top: 10px;
+      left: 5%;
+    }
 }

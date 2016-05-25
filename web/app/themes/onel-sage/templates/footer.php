@@ -2,6 +2,7 @@
   <div class="container">
     <?php dynamic_sidebar('sidebar-footer'); ?>
   </div>
+  <?php get_template_part('templates/home/find-us'); ?>
   <div class="container-fluid footermenu">
     <div class="container">
       <div class="row">

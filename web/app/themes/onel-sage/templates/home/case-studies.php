@@ -18,40 +18,8 @@
                     }
                     ?></h2>
             </div>
-            <div class="col-sm-12 col-md-5 col-lg-5 featured">
-                <?php
-                $posts = get_posts(array(
-                    'posts_per_page'	=>  -1,
-                    'post_type'			=>  'case_studies',
-                    'order'             =>  'ASC',
 
-                ));
-                if( $posts ): ?>
-                    <?php
-                        foreach( $posts as $post ):
-                        setup_postdata( $post );
-                        $case_study_title_featured = get_field('case_study_title');
-                        $case_study_featured = get_field('case_study_featured');
-                        $case_study_image_featured = get_field('case_study_image');
-                        $case_study_excerpt_text_featured = get_field('case_study_excerpt_text');
-                    ?>
-                        <?php if($case_study_featured == 1 ): ?>
-                                <img src="<?php echo $case_study_image_featured; ?>" alt="">
-                                <section>
-                                    <h2>
-                                        <?php echo $case_study_title_featured; ?>
-                                    </h2>
-                                        <p>
-                                            <?php echo $case_study_excerpt_text_featured; ?>
-                                            <a href="<?php the_permalink(); ?>" class="hvr-icon-forward glyphicon glyphicon-menu-right pull-right"><span>&nbsp;</span></a>
-                                        </p>
-                                </section>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                    <?php wp_reset_postdata(); ?>
-                <?php endif; ?>
-            </div>
-            <div class="col-sm-12 col-md-7 col-lg-7 aside">
+            <div class="col-sm-12 aside">
                 <div class="row">
                     <?php
                     $posts_2 = get_posts(array(

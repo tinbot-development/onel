@@ -88,6 +88,9 @@ function display_sidebar() {
     is_front_page(),
     is_single(),
     is_page_template('template-custom.php'),
+    is_page_template('template-contact.php'),
+    is_page_template('template-logo-grid.php'),
+    
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

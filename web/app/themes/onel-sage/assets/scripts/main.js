@@ -19,6 +19,18 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        //$('#menu-main-menu > li > a.dropdown-toggle').removeAttr('data-toggle');
+        //
+        //$("#menu-main-menu > li").hover(function(){
+        //  $('#menu-main-menu > li.menu-item-has-children').removeClass('drop');
+        //});
+        //
+        //$("#menu-main-menu > li.menu-item-has-children").hover(function(){
+        //  $('#menu-main-menu > li.menu-item-has-children').removeClass('drop');
+        //  $(this).addClass('drop');
+        //});
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -38,6 +50,12 @@
     'about_us': {
       init: function() {
         // JavaScript to be fired on the about us page
+        if($(window.location.hash).length > 0){
+          var location = $(window.location.hash).offset().top - 50;
+          $('html, body').animate({ scrollTop:location}, 1000);
+        }
+
+
       }
     }
   };

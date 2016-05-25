@@ -19,15 +19,22 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
 
       if(is_front_page()) {
-        get_template_part('templates/home/banner');
+        //get_template_part('templates/home/banner');
         get_template_part('templates/home/what-we-do');
         get_template_part('templates/home/our-expertise');
         get_template_part('templates/home/case-studies');
-        get_template_part('templates/home/find-us');
+
       }
     ?>
 
-    <? if(!is_front_page()) { ?>
+    <?php
+    if(!is_front_page()) {
+
+          if(is_single()) {
+              get_template_part('templates/page', 'header');
+          }
+
+      ?>
 
       <div class="wrap container" role="document">
         <div class="content row">

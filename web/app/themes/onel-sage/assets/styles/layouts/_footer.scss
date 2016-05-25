@@ -16,11 +16,10 @@ footer {
             a {
               color: $white;
               font-size: $main-menu-primary-font-size;
-              font-family: $font-family-OpenSans;
-              font-weight: 100;
+              font-weight: 300;
               &:hover {
                 background-color: transparent;
-                font-weight: 100;
+                font-weight: 300;
                 color: $secondary-color;
               }
             }
@@ -37,7 +36,6 @@ footer {
       p {
         color: $white;
         font-size: $footer-footnote-font-size;
-        font-family: $font-family-OpenSans;
         font-weight: 300;
         span {
           font-weight: 700;
@@ -45,7 +43,6 @@ footer {
         a {
           color: $white;
           font-size: $footer-footnote-font-size;
-          font-family: $font-family-OpenSans;
           font-weight: 300;
         }
       }
@@ -59,6 +56,14 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
+  #menu-main-menu {
+    li {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: $drop-down-menu-border-color;
+      padding: 5px 0;
+    }
+  }
   #case-studies .aside section {
     position: relative;
     max-height: 100%;
@@ -76,15 +81,85 @@ footer {
   }
   .navbar-default .navbar-collapse {
     border-color: #e7e7e7;
-    background-color: $drop-down-menu-background;
+    background-color: $tertiary-color;
     position: relative;
     top: 50px;
+    z-index: 999;
   }
   .navbar-default .navbar-toggle {
     position: relative;
     top: 40px;
+    background-color: $secondary-color;
+    &:hover{
+      background-color: $tertiary-color;
+    }
   }
   .navbar-default .navbar-toggle .icon-bar {
     background-color: $drop-down-menu-background;
   }
+
+  ul#menu-main-menu>li.current-menu-parent>ul :after, ul#menu-main-menu>li.menu-item-has-children>ul :after {
+    display: none;
+  }
+  ul#menu-main-menu>li.current-menu-parent>ul:before, ul#menu-main-menu>li.menu-item-has-children>ul:before {
+    display: none;
+  }
+
+  ul#menu-main-menu>li.current-menu-parent>ul, ul#menu-main-menu>li.menu-item-has-children>ul li {
+    padding-left: 10px;
+    a {
+      color: $white;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  ul.services {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 50px;
+      &.odd {
+        a {
+          display: inherit;
+          width: 100% !important;
+          max-width: 100% !important;
+          float: left;
+          img {
+            margin-right: 0 !important;
+            margin-bottom: 30px !important;
+            width: 100%;
+          }
+        }
+        section {
+          h3 {
+            a {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+      &.even {
+        a {
+          display: inherit;
+          width: 100%;
+          max-width: 100%;
+          img {
+            margin-left: 0;
+            width: 100%;
+          }
+        }
+      }
+
+
+    }
+  }
+
+
+
+
 }

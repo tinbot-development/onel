@@ -1,4 +1,9 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
+<?php
+  if ( function_exists( 'ot_get_option' ) ) {
+    $header_background_image = ot_get_option('header_background_image');
+  }
+?>
+<header class="banner navbar navbar-default navbar-static-top" role="banner" style="background: url(<?php echo $header_background_image['background-image']; ?>) <?php echo $header_background_image['background-repeat'].'; background-size: '.$header_background_image['background-size'].'; background-position: '.$header_background_image['background-position'].'; background-attachment: '.$header_background_image['background-attachment'].'; background-color: '.$header_background_image['background-color']; ?>">
   <div class="container-fluid header-bar">
     <div class="container">
       <div class="row">
@@ -41,4 +46,11 @@
       </nav>
     </div>
   </div>
+
+  <?php
+
+  if(is_front_page()) {
+    get_template_part('templates/home/banner');
+  }
+  ?>
 </header>

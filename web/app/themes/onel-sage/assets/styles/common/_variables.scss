@@ -17,6 +17,7 @@ $tertiary-color:        #504b92;
 $menu-hover-color:      #eaeaf2;
 $secondary-menu-hover:  #fee5dd;
 $header-bar-color:      #504b92;
+
 $white:                 #ffffff;
 $black:                 #000000;
 $footer-bg-color:       #26247b;
@@ -27,20 +28,17 @@ $drop-down-menu-background: rgba(240,239,245,0.8);
 $drop-down-menu-border-color: #555095;
 $drop-down-menu-hover-color: #fee5dd;
 $drop-down-menu-arrow-color: #f0eff5;
-
+$border-color:               #eee;
+$button-hover-color:     #C34C1E;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-OpenSans: 'Open Sans', sans-serif;
 
-$open_sansregular: 'open_sansregular';
-$open_sanslight: 'open_sanslight';
-$open_sansbold: 'open_sansbold';
-
-$main-menu-primary-font-size: 30px;
+$main-menu-primary-font-size: 24px;
 $main-menu-secondary-font-size: 16px;
 $footer-footnote-font-size: 12px;
 $icon-arrow-down-hover: "../images/icon-arrow-down-hover.png";

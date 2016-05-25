@@ -8,3 +8,26 @@
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
 }
+
+
+aside.logo-grid-content{
+   margin-bottom: 2em;
+    a {
+        display: block;
+        min-height: 355px;
+        max-width: 355px;
+        position: relative;
+        .img-holder {
+          background-size: 60% !important;
+          border-radius: 50%;
+          border: 1px solid rgba(0, 0, 0, 0.32);
+          display: block;
+          position: absolute;
+        }
+
+      @media screen and (min-width: $screen-md-min)
+      and (max-width: $screen-md-max){
+          min-height: 283px;
+      }
+    }
+}
