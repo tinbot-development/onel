@@ -73,15 +73,24 @@ img {
   }
   a {
     //border: 5px solid #26257a;
+    //border-radius: 50%;
+    //position: relative;
+    //overflow: hidden;
+    //max-width: 328px;
+    //width: 100%;
+    //max-height: 328px;
+    //height: 100%;
+    //display: block;
+    //margin: 0 auto;
+    //background: url(https://www.onel.com.au/app/uploads/2016/04/our-expertise-e1464166065966.jpg) no-repeat center / cover;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-    max-width: 328px;
-    width: 100%;
-    max-height: 328px;
-    height: 100%;
+    width: 360px;
+    height: 360px;
     display: block;
-    margin: 0 auto;
+    margin: 0;
+
 
     section {
       position: absolute;
@@ -532,4 +541,61 @@ input[type='submit'], .btn-default, .search-form .search-submit {
 .gform_wrapper .gform_footer {
   padding: 0em 0 .625em 0 !important;
   margin: 0 !important;
+}
+
+/* Custom CSS */
+
+article.post-142.service.type-service.status-publish.hentry.services-service {
+  padding-right: 40px;
+}
+
+.widget h3 {
+
+  text-align: center;
+}
+
+.page-header {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+main.main ul li {
+  margin-bottom: 20px;
+  line-height: 28px;
+}
+
+.page-id-25 #find-us {
+  display: none;
+}
+
+main h2 {
+  line-height: 38px;
+}
+
+.h3, h3 {
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.wrap .content main li {
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+
+.wrap .content main p {
+  line-height: 28px;
+}
+
+
+.brand>img {
+  margin-top: -3.3em;
+}
+
+p.pull-left {
+  margin-top: 4px;
+}
+
+#banner .home-banner .btn-primary, #banner .home-banner .comment-form input[type=submit], .comment-form #banner .home-banner input[type=submit] {
+  font-size: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
 }

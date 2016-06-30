@@ -10,6 +10,10 @@
       "files": [
         "styles/main.scss"
       ],
+      "vendor": [
+        "../../plugins/simple-social-icons/css/style.css"
+
+      ],
       "main": true
     },
     "customizer.js": {

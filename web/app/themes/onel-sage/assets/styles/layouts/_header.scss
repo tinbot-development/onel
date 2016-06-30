@@ -1,3 +1,9 @@
+header.banner{
+  .simple-social-icons ul li{
+    margin: 0 !important;
+  }
+}
+
 .navbar {
   margin-bottom: 0px;
   border: 0px solid transparent;
@@ -29,12 +35,19 @@
 .nav-bg {
     height: 100px;
     background-color: rgba(38, 36, 123, 0.95);
-    .navbar-header .navbar-brand >img {
-      height: 120px;
-      margin-top: -3em;
+    .navbar-header .navbar-brand {
+      padding: 15px 0;
+        >img {
+          height: 120px;
+          margin-top: -3em;
+        }
     }
 }
 
+
+.navbar-brand{
+  padding: 15px 0;
+}
 
 #menu-main-menu {
   & > li {

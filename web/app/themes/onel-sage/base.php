@@ -30,9 +30,9 @@ use Roots\Sage\Wrapper;
     <?php
     if(!is_front_page()) {
 
-          if(is_single()) {
+//          if(is_single()) {
               get_template_part('templates/page', 'header');
-          }
+//          }
 
       ?>
 

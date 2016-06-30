@@ -57,5 +57,36 @@
       font-size: 56px;
     }
   }
+}
 
+/* Mobile Styles */
+body.is-phone {
+
+    #banner .home-banner h1 {
+      font-size: 35px;
+    }
+
+    .what-we-do-content .bg-secondary-light {
+        position: relative;
+        h2 {
+          font-size: 45px;
+        }
+    }
+
+    #our-expertise a {
+      height: 158px;
+      width: 100%;
+      section {
+        top: 33%;
+          p {
+            font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 0;
+          }
+          span.arrow-down {
+            margin: 0 auto 0;
+            background-size: 60%;
+          }
+      }
+    }
 }

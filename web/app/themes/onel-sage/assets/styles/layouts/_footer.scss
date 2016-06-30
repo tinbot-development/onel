@@ -1,4 +1,9 @@
 footer {
+  .footer-brand {
+      > img {
+          height: 101px;
+      }
+  }
   .footermenu {
     background-color: $footer-bg-color;
     min-height: 135px;

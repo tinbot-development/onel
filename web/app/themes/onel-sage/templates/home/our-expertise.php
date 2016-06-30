@@ -26,9 +26,8 @@
                         $expertise_image = get_field('expertise_image');
                         $custom_link = (get_field('custom_link')) ? do_shortcode(get_field('custom_link')) : get_the_permalink();
                     ?>
-                    <div class="col-sm-4 col-sm-6 col-md-4 col-lg-4 item">
-                            <a href="<?php echo $custom_link; ?>" >
-                                <img class="img-circle" src="<?php echo $expertise_image; ?>" alt="">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 item">
+                            <a href="<?php echo $custom_link; ?>" style="background: url('<?php echo $expertise_image; ?>') no-repeat center / cover;">
                                 <section>
                                     <p><?php echo $expertise_name; ?></p>
                                     <span class="arrow-down">&nbsp;</span>

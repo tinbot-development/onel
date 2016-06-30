@@ -13,8 +13,10 @@
     <div class="what-we-do-content" style="background: url(<?php echo $bgimage['url']; ?>) center / cover no-repeat; height: 380px">
         <div class="container">
             <div class="row">
-                <aside class="col-md-4 bg-secondary-light">
-                    <?php the_field('sub_banner_content');?>
+                <aside class="col-md-6 col-lg-5">
+                    <div class="bg-secondary-light" style="height: 380px">
+                        <?php the_field('sub_banner_content');?>
+                    </div>
                 </aside>
             </div>
         </div>

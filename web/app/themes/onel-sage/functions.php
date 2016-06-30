@@ -79,3 +79,24 @@ function featured_case_study(){
   return $result;
 }
 add_shortcode( 'case-study', 'featured_case_study' );
+
+
+
+/* Remove files from plugins and combine to main.css*/
+
+add_action( 'wp_enqueue_scripts', 'remove_plugin_stylesheets', 20 );
+
+function remove_plugin_stylesheets() {
+
+  wp_dequeue_style( 'simple-social-icons-font' );
+  wp_deregister_style( 'simple-social-icons-font' );
+
+}
+
+/**
+ *  Move Gravity Forms jQuery Calls to Footer
+ */
+add_filter("gform_init_scripts_footer", "init_scripts");
+function init_scripts() {
+  return true;
+}

@@ -12,7 +12,7 @@ use Roots\Sage\Wrapper;
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
-    <div class="col-xs-12 col-md-sm-6 col-md-8">
+    <div class="col-md-12">
         <article <?php post_class(); ?>>
             <header>
                 <h2 class="entry-title"><?php echo get_field('sub_title'); ?></h2>
@@ -29,7 +29,3 @@ use Roots\Sage\Wrapper;
 
 <?php endwhile; ?>
 
-
-    <div class="col-xs-12 col-md-sm-6 col-md-4">
-        <?php include Wrapper\sidebar_path(); ?>
-    </div>

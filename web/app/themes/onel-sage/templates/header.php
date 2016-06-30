@@ -1,16 +1,23 @@
 <?php
   if ( function_exists( 'ot_get_option' ) ) {
-    $header_background_image = ot_get_option('header_background_image');
+    $header_background_image_id = ot_get_option('header_background_image_id');
+    if(wp_is_mobile()){
+      $header_background_image = wp_get_attachment_image_src( $header_background_image_id , array(1200,500));
+
+    } else {
+      $header_background_image = wp_get_attachment_image_src( $header_background_image_id, "full" );
+    }
+
   }
 ?>
-<header class="banner navbar navbar-default navbar-static-top" role="banner" style="background: url(<?php echo $header_background_image['background-image']; ?>) <?php echo $header_background_image['background-repeat'].'; background-size: '.$header_background_image['background-size'].'; background-position: '.$header_background_image['background-position'].'; background-attachment: '.$header_background_image['background-attachment'].'; background-color: '.$header_background_image['background-color']; ?>">
-  <div class="container-fluid header-bar">
+<header class="banner navbar navbar-default navbar-static-top" role="banner" style="background: url(<?php echo home_url($header_background_image[0]); ?>) no-repeat center / cover;">
+  <div class="header-bar">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <section class="pull-right">
             <p class="pull-left">Level 27, 101 Collins Street Melbourne VIC 3000  |  <span>03 9653 6400</span>  |  info@onel.com.au</p>
-            <ol class="pull-left connect">
+            <ol class="pull-right connect">
               <?php dynamic_sidebar( 'header-social-media' ); ?>
               </ol>
           </section>

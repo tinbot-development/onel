@@ -18,13 +18,6 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
 
-      if(is_front_page()) {
-        //get_template_part('templates/home/banner');
-        get_template_part('templates/home/what-we-do');
-        get_template_part('templates/home/our-expertise');
-        get_template_part('templates/home/case-studies');
-        get_template_part('templates/home/find-us');
-      }
     ?>
 
     <?php if(!is_front_page()) { ?>
